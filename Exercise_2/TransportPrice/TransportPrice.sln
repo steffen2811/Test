@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportPrice", "TransportPrice.csproj", "{6D6F4DBF-5534-4324-AC3A-3B338DA96260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTransportPrice", "..\TestTransportPrice\TestTransportPrice.csproj", "{5A01FDC3-D27A-4C22-A9B8-0D17E68BF3CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D6F4DBF-5534-4324-AC3A-3B338DA96260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6F4DBF-5534-4324-AC3A-3B338DA96260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6F4DBF-5534-4324-AC3A-3B338DA96260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6F4DBF-5534-4324-AC3A-3B338DA96260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A01FDC3-D27A-4C22-A9B8-0D17E68BF3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A01FDC3-D27A-4C22-A9B8-0D17E68BF3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A01FDC3-D27A-4C22-A9B8-0D17E68BF3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A01FDC3-D27A-4C22-A9B8-0D17E68BF3CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0A00125-9473-4D5A-B1C0-A6A66633B37F}
+	EndGlobalSection
+EndGlobal
