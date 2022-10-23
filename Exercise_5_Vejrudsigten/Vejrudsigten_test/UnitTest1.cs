@@ -42,5 +42,30 @@ namespace Vejrudsigten_test
             Assert.Equal(expected, result.Result);
 
         }
+
+        [Theory]
+        [InlineData(0, "Klart vejr", 0, "Andet")]
+        [InlineData(1, "Skyet", 6, "Klart vejr")]
+        [InlineData(6, "Regn", 8, "Skyet")]
+        public void NegativeBlackBoxTests(double tempYesterday, string condYesterday, double tempToday, string condToday)
+        {
+            var WeatherServiceStub = new Mock<IWeatherService>();
+
+            WeatherInfo weatherInfoYesterday = new WeatherInfo();
+            weatherInfoYesterday.Temperature = tempYesterday;
+            weatherInfoYesterday.Conditions = condYesterday;
+
+            WeatherInfo weatherInfoToday = new WeatherInfo();
+            weatherInfoToday.Temperature = tempToday;
+            weatherInfoToday.Conditions = condToday;
+
+            WeatherServiceStub.Setup(x => x.GetYesterdaysWeather(It.IsAny<string>(), It.IsAny<string>())).Returns(Task.FromResult(weatherInfoYesterday));
+            WeatherServiceStub.Setup(x => x.GetTodaysWeather(It.IsAny<string>(), It.IsAny<string>())).Returns(Task.FromResult(weatherInfoToday));
+
+            WeatherForecast.SetWeatherService(WeatherServiceStub.Object);
+            var result = WeatherForecast.GetForecastAsync("some_key");
+
+            Assert.Equal("Vejrtekst ikke defineret", result.Result);
+        }
     }
 }
